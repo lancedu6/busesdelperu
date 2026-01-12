@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("bus.jpg") center / cover no-repeat;
+}
+
+
+.stars {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    100px 200px #fff,
+    300px 400px #fff,
+    500px 100px #fff,
+    700px 300px #fff,
+    900px 150px #fff,
+    1200px 250px #fff,
+    1400px 100px #fff,
+    1600px 350px #fff;
+  animation: moveStars 50s linear infinite;
+}
+
+
+.stars2 {
+  transform: scale(1.5);
+  opacity: 0.6;
+  animation-duration: 80s;
+}
+
+.stars3 {
+  transform: scale(2);
+  opacity: 0.3;
+  animation-duration: 120s;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
